@@ -44,5 +44,6 @@ export default{
 <style >
 #v-list{
   max-width: 100%;
+  margin: 95px 0 0 0;
 }
 </style>

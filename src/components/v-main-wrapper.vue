@@ -3,13 +3,11 @@
     <vMultiSelect/>
     <vList/>
     <vClearButton
-      class="clear-box"
-      v-if="this.VALUE.length"/>
+      class="clear-box"/>
   </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
 import vMultiSelect from './list/v-multiselect'
 import vList from './list/v-list'
 import vClearButton from './list/v-clear-button'
@@ -25,11 +23,6 @@ export default{
     return{}
   },
   methods:{
-  },
-  computed: {
-    ...mapGetters([
-      'VALUE'
-    ])
   }
 }
 </script>
@@ -37,7 +30,7 @@ export default{
 <style lang="scss">
 .clear-box{
   text-align: center;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;  

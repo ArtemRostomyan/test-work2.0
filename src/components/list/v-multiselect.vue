@@ -2,7 +2,7 @@
   <div id="v-multiselect">
     <div>
       <multiselect 
-        @input="UPDATE_VALUE_ACTION"
+        @input="updateValue"
         :value="VALUE" 
         :options="options" 
         :multiple="true" 
@@ -41,8 +41,14 @@ export default{
   methods:{
     ...mapActions([
       'GET_PRODUCTS_FROM_GITHUB',
-      'UPDATE_VALUE_ACTION'
-    ])
+      'UPDATE_VALUE_ACTION',
+      'UPDATE_HISTORY_ARRAYS'
+    ]),
+    updateValue(value){
+      this.UPDATE_VALUE_ACTION(value)
+      this.UPDATE_HISTORY_ARRAYS(value)
+
+    }
   },
   computed: {
     ...mapGetters([

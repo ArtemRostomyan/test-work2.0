@@ -25,7 +25,6 @@ export default {
                string_array.push(array[i])
             } else {
                other_array.push(array[i])
-               console.log(array[i], 'other')
             }
          }
          if(other_array.length){
@@ -41,7 +40,6 @@ export default {
    },
    UPDATE_VALUE_ACTION (state, value) {
       state.value = value
-      console.log(state.value)
    },
    CLEAR_VALUE (state) {
       state.value = []
@@ -56,7 +54,6 @@ export default {
          new_history_page.push(...value)
       }
       state.historyArrays.push(new_history_page)
-      console.log(state.historyArrays)
    },
    UPDATE_VALUE_TEXT(state, value){
       state.value_text = value
@@ -70,5 +67,8 @@ export default {
          state.value =  []
       }
       
+   },
+   ERROR_FETCH(state){
+      state.error_fetch = !state.error_fetch
    }
 }

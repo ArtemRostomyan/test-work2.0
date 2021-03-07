@@ -50,10 +50,6 @@ export default{
     updateValue(value){
       console.log(value)
       this.UPDATE_VALUE_ACTION(value)
-      // for(let i = 0; i < value.length; i++){
-      //   this.UPDATE_VALUE_ACTION({name: Object.values(value[i])})
-      //   console.log(Object.values({name: Object.values(value[i])}))
-      // }
     }
   },
   computed: {

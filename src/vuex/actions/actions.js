@@ -7,6 +7,7 @@ export default {
       .then((data) => {
          commit('SET_DATA_FOR_STATE', data)
       })
+      .catch(() => commit('ERROR_FETCH') )
     },
     UPDATE_VALUE_ACTION({ commit }, value) {
       commit('UPDATE_VALUE_ACTION', value)

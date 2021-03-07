@@ -14,5 +14,8 @@ export default {
    },
    GET_VALUE_TEXT(states){
       return states.value_text
+   },
+   GET_ERROR(states){
+      return states.error_fetch
    }
 }

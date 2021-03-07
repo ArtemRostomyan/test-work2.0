@@ -4,25 +4,42 @@
     <vList/>
     <vClearButton
       class="clear-box"/>
+    <vError
+      v-if="get_error"/>
   </div>
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 import vMultiSelect from './list/v-multiselect'
 import vList from './list/v-list'
 import vClearButton from './list/v-clear-button'
+import vError from './list/error-handling/v-error'
 
 export default{
   name: "v-main-wrapper",
   components: {
     vMultiSelect,
     vList,
-    vClearButton
+    vClearButton,
+    vError
   },
   data(){
     return{}
   },
   methods:{
+  },
+  computed: {
+    ...mapGetters([
+      'GET_ERROR'
+    ]),
+    get_error(){
+      if(this.GET_ERROR == true){
+        return true
+      } else {
+        return false
+      }
+    }
   }
 }
 </script>

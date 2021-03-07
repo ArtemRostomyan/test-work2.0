@@ -12,7 +12,8 @@ let store = new vuex.Store({
       data: [],
       value: [],
       historyArrays: [],
-      value_text: []
+      value_text: [],
+      error_fetch: false
    },
    mutations,
    actions,
